@@ -1,0 +1,1305 @@
+2024-04-29 12:20:36 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:20:36 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:20:36 [INFO] Prompt ID: e653ee03-48d5-4ea6-beb6-79a144398d44
+2024-04-29 12:20:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:20:36 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:20:36 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:20:36 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:20:40 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Amritsar,9329359452,6.35
+Pune,1325603226,7.16
+Kolkata,4409332563,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:20:40 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:20:41 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:22:05 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:22:05 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:22:05 [INFO] Prompt ID: b510745d-2281-4b5b-bb35-2a9ae0ab1d3f
+2024-04-29 12:22:05 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:22:05 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:22:05 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:22:05 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:22:09 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Bengaluru,6049996521,4.23
+Jaipur,4466764923,8.22
+Agra,9585361583,3.36
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:22:09 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:22:10 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:22:48 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:22:48 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:22:48 [INFO] Prompt ID: 138e9220-89ef-480a-81d6-20bf5c970684
+2024-04-29 12:22:48 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:22:48 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:22:48 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:22:48 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:22:51 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Chennai,1105775156,9.94
+Agra,3486855789,8.07
+Lucknow,7556731654,6.1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:22:51 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:22:52 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:23:02 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:23:02 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:23:02 [INFO] Prompt ID: 3b67659b-afac-4c35-b255-9d4984234953
+2024-04-29 12:23:02 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:23:02 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:23:02 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:23:02 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:23:15 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Chennai,1105775156,9.94
+Agra,3486855789,8.07
+Lucknow,7556731654,6.1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:23:15 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:23:16 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:37:36 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:37:36 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:37:36 [INFO] Prompt ID: 952327cf-f91d-4c8b-94e4-f89c5c81818e
+2024-04-29 12:37:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:37:36 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:37:36 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:37:36 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:37:38 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Chennai,1105775156,9.94
+Agra,3486855789,8.07
+Lucknow,7556731654,6.1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:37:38 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:37:40 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:40:48 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:40:48 [INFO] Running PandasAI with openai LLM...
+2024-04-29 12:40:48 [INFO] Prompt ID: 66582129-5920-483e-a338-26b8a219b594
+2024-04-29 12:40:48 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:40:48 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:40:48 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:40:48 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:40:53 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Amritsar,8375024733,6.87
+Chennai,0799023872,8.22
+Mumbai,3400241245,6.1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:40:53 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:40:53 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-04-29 12:40:53 [INFO] Retrying request to /chat/completions in 0.902652 seconds
+2024-04-29 12:40:55 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-04-29 12:40:55 [INFO] Retrying request to /chat/completions in 1.570341 seconds
+2024-04-29 12:40:57 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-04-29 12:40:57 [ERROR] Pipeline failed on step 3: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2024-04-29 12:42:33 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:42:33 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:42:33 [INFO] Prompt ID: 5892b88e-8aa4-42af-ab07-56e64e05d1e3
+2024-04-29 12:42:33 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:42:33 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:42:33 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:42:34 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:42:41 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Amritsar,8375024733,6.87
+Chennai,0799023872,8.22
+Mumbai,3400241245,6.1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:42:41 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:42:43 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:43:01 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:43:01 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:43:01 [INFO] Prompt ID: c2c0f54b-291a-4217-89bb-a60d23a81584
+2024-04-29 12:43:01 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:43:01 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:43:01 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:43:02 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:43:04 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:43:04 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:43:06 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:43:19 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:43:19 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:43:19 [INFO] Prompt ID: a53dbe6e-d477-4ef2-9a3f-9a46ac4d12a3
+2024-04-29 12:43:19 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:43:19 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:43:19 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:43:19 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:43:21 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:43:21 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:43:22 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:47:44 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:47:44 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:47:44 [INFO] Prompt ID: 9f139369-9cdf-4472-be95-d10733299020
+2024-04-29 12:47:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:47:44 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:47:44 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:47:45 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:47:45 [INFO] Querying without using training data.
+2024-04-29 12:47:52 [INFO] Querying without using training docs.
+2024-04-29 12:47:52 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:47:52 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:47:53 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:50:57 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:50:57 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:50:57 [INFO] Prompt ID: 900d0553-c2f4-4e42-875d-f47817979bfd
+2024-04-29 12:50:57 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:50:57 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:50:57 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:50:57 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:50:58 [INFO] Querying without using training data.
+2024-04-29 12:50:59 [INFO] Querying without using training docs.
+2024-04-29 12:50:59 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:50:59 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:51:00 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:53:58 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:53:58 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:53:59 [INFO] Prompt ID: 2545bfc8-0e8e-4589-a91b-f3097c79fb50
+2024-04-29 12:53:59 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:53:59 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:53:59 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:53:59 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:54:00 [INFO] Querying without using training data.
+2024-04-29 12:54:01 [INFO] Querying without using training docs.
+2024-04-29 12:54:01 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:54:01 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:54:02 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:54:16 [INFO] Question: Which are the top 5 countries by sales?
+2024-04-29 12:54:17 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:54:17 [INFO] Prompt ID: 2439c6b9-8414-4606-a587-6c39d87cddc9
+2024-04-29 12:54:17 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:54:17 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:54:17 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:54:17 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:54:17 [INFO] Querying without using training data.
+2024-04-29 12:54:19 [INFO] Querying without using training docs.
+2024-04-29 12:54:19 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which are the top 5 countries by sales?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:54:19 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:54:20 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:56:12 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 12:56:12 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:56:12 [INFO] Prompt ID: 02c681ad-72ec-4f85-ad7e-42cbb37812d5
+2024-04-29 12:56:12 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:56:12 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:56:12 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:56:12 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:56:12 [INFO] Querying without using training data.
+2024-04-29 12:56:13 [INFO] Querying without using training docs.
+2024-04-29 12:56:13 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:56:13 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:56:14 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 12:59:36 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 12:59:36 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 12:59:36 [INFO] Prompt ID: 8bdc5c86-ef91-4d20-aeac-0a6ee4c3954c
+2024-04-29 12:59:36 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 12:59:36 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 12:59:36 [INFO] Executing Step 1: CacheLookup
+2024-04-29 12:59:36 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 12:59:37 [INFO] Querying without using training data.
+2024-04-29 12:59:39 [INFO] Querying without using training docs.
+2024-04-29 12:59:39 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 12:59:39 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 12:59:40 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:00:57 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:00:57 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:00:57 [INFO] Prompt ID: c8142165-d009-4c78-8b6f-76f297e66fe2
+2024-04-29 13:00:57 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:00:57 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:00:57 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:00:57 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:00:58 [INFO] Querying without using training data.
+2024-04-29 13:00:59 [INFO] Querying without using training docs.
+2024-04-29 13:00:59 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:00:59 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:01:01 [ERROR] Pipeline failed on step 3: Unauthorized
+2024-04-29 13:01:23 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:01:23 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:01:23 [INFO] Prompt ID: e200d0e9-d2a1-4201-925a-ec7e45ef3eca
+2024-04-29 13:01:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:01:23 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:01:23 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:01:23 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:01:24 [INFO] Querying without using training data.
+2024-04-29 13:01:25 [INFO] Querying without using training docs.
+2024-04-29 13:01:25 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:01:25 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:01:26 [ERROR] Pipeline failed on step 3: Unauthorized
+2024-04-29 13:01:42 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:01:42 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:01:42 [INFO] Prompt ID: 6398860d-1b3f-400d-b53d-6884f71bdb98
+2024-04-29 13:01:42 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:01:42 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:01:42 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:01:42 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:01:43 [INFO] Querying without using training data.
+2024-04-29 13:01:44 [INFO] Querying without using training docs.
+2024-04-29 13:01:44 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,4200072669,7.16
+Jaipur,3776100094,6.1
+Kolkata,3356203933,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:01:44 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:01:45 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:04:27 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:04:27 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:04:27 [INFO] Prompt ID: 2260e9bb-95cd-4a7d-b90d-48c689ee6bcb
+2024-04-29 13:04:27 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:04:27 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:04:27 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:04:27 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:04:28 [INFO] Querying without using training data.
+2024-04-29 13:04:29 [INFO] Querying without using training docs.
+2024-04-29 13:04:29 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Amritsar,3090724856,4.23
+Bengaluru,3755255822,3.36
+Chennai,6429989139,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:04:29 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:04:30 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:04:51 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:04:51 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:04:51 [INFO] Prompt ID: 9ca15025-6019-433e-b3fc-86654615646b
+2024-04-29 13:04:51 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:04:51 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:04:51 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:04:51 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:04:52 [INFO] Querying without using training data.
+2024-04-29 13:04:53 [INFO] Querying without using training docs.
+2024-04-29 13:04:53 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Agra,6411159734,4.23
+Pune,5080415945,7.16
+Amritsar,6971134668,6.87
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:04:53 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:04:53 [ERROR] Pipeline failed on step 3: Unauthorized
+2024-04-29 13:06:31 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:06:31 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:06:31 [INFO] Prompt ID: 5fc967e5-6cec-4891-98f4-4f953d3b9b0f
+2024-04-29 13:06:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:06:31 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:06:31 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:06:31 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:06:43 [INFO] Querying without using training data.
+2024-04-29 13:06:44 [INFO] Querying without using training docs.
+2024-04-29 13:06:44 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Kolkata,5700062602,6.35
+Lucknow,8656834543,4.23
+Amritsar,8489383329,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:06:44 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:06:44 [ERROR] Pipeline failed on step 3: Unauthorized
+2024-04-29 13:07:43 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:07:43 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:07:43 [INFO] Prompt ID: 65f0dc83-0f64-4469-b4b4-801ad3039815
+2024-04-29 13:07:43 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:07:43 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:07:43 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:07:43 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:07:44 [INFO] Querying without using training data.
+2024-04-29 13:07:45 [INFO] Querying without using training docs.
+2024-04-29 13:07:45 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Jaipur,7792254588,6.98
+Lucknow,8340843351,7.16
+Mumbai,2981328773,9.94
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:07:45 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:07:46 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:13:20 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:13:20 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:13:20 [INFO] Prompt ID: 07dd7d60-3a69-4a3c-ab63-9c1191cc8aa8
+2024-04-29 13:13:20 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:13:20 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:13:20 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:13:20 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:13:23 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Mumbai,6441817647,8.22
+Chennai,1970638441,6.35
+Bengaluru,0765597144,6.98
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:13:23 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:13:24 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:13:46 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:13:46 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:13:46 [INFO] Prompt ID: e80c0e27-e820-400e-a9a3-d86ea2d10077
+2024-04-29 13:13:46 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:13:46 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:13:46 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:13:46 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:13:48 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Chennai,4265229160,9.94
+Mumbai,5947199668,6.87
+Amritsar,4542676717,4.23
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:13:48 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:13:49 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:15:13 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:15:13 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:15:13 [INFO] Prompt ID: 16330bbd-823c-44fd-8d7e-f90d6c7a7ffb
+2024-04-29 13:15:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:15:13 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:15:13 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:15:13 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:15:15 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Agra,0402139550,4.23
+Delhi,6753727379,6.1
+Mumbai,5020016912,3.36
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:15:15 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:15:16 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-29 13:20:51 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-29 13:20:51 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-29 13:20:51 [INFO] Prompt ID: 22f6d53c-5409-4163-9895-a0d26370f59c
+2024-04-29 13:20:51 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-29 13:20:51 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-29 13:20:51 [INFO] Executing Step 1: CacheLookup
+2024-04-29 13:20:51 [INFO] Executing Step 2: PromptGeneration
+2024-04-29 13:20:55 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Pune,8260181058,3.36
+Delhi,1515390507,4.23
+Amritsar,8963108629,8.22
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-29 13:20:55 [INFO] Executing Step 3: CodeGenerator
+2024-04-29 13:21:02 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
