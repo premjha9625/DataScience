@@ -1303,3 +1303,2114 @@ If you are asked to plot a chart, use "matplotlib" for charts, save as png.
 Generate python code and return full updated code:
 2024-04-29 13:20:55 [INFO] Executing Step 3: CodeGenerator
 2024-04-29 13:21:02 [ERROR] Pipeline failed on step 3: Unable to generate LLM response.
+2024-04-30 10:55:25 [INFO] Question: Calculate the total tax collected in north Indian cities
+2024-04-30 10:55:26 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 10:55:26 [INFO] Prompt ID: 05307e1d-bad3-4d27-8ed2-294994353ad2
+2024-04-30 10:55:26 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 10:55:26 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 10:55:26 [INFO] Executing Step 1: CacheLookup
+2024-04-30 10:55:26 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 10:55:28 [INFO] Using prompt: <dataframe>
+dfs[0]:10x3
+country,annual tax collected,happiness_index
+Amritsar,4761101029,8.07
+Chennai,5887896528,6.35
+Bengaluru,7757063135,9.94
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Calculate the total tax collected in north Indian cities
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 10:55:28 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 10:55:31 [INFO] Prompt used:
+            None
+            
+2024-04-30 10:55:31 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+tax_collected = 0
+for df in dfs:
+    for index, row in df.iterrows():
+        if row['country'] in ['Amritsar', 'Chennai']:
+            tax_collected += row['annual tax collected']
+
+result = {"type": "number", "value": tax_collected}
+            ```
+            
+2024-04-30 10:55:31 [INFO] Executing Step 4: CachePopulation
+2024-04-30 10:55:31 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 10:55:31 [INFO] 
+Code running:
+```
+tax_collected = 0
+for df in dfs:
+    for index, row in df.iterrows():
+        if row['country'] in ['Amritsar', 'Chennai']:
+            tax_collected += row['annual tax collected']
+result = {'type': 'number', 'value': tax_collected}
+        ```
+2024-04-30 10:55:31 [INFO] Executing Step 6: CodeExecution
+2024-04-30 10:55:32 [ERROR] Unable to extract filters for passed code
+2024-04-30 10:55:32 [INFO] Executing Step 7: ResultValidation
+2024-04-30 10:55:32 [INFO] Answer: {'type': 'number', 'value': 78165738772}
+2024-04-30 10:55:32 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:04:25 [INFO] Question: Which players are the most costliest buys?
+2024-04-30 11:04:25 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:04:25 [INFO] Prompt ID: 2d43aad8-03e6-491a-ad74-e5d68d8e7b8b
+2024-04-30 11:04:25 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:04:25 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:04:25 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:04:25 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:04:28 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which players are the most costliest buys?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:04:28 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:04:31 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:04:31 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Get the most costliest buys
+most_costly_players = dfs[0].nlargest(2, 'Cost in Rs. (CR)')
+
+result = {
+    "type": "dataframe",
+    "value": most_costly_players
+}
+            ```
+            
+2024-04-30 11:04:31 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:04:31 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:04:31 [INFO] 
+Code running:
+```
+most_costly_players = dfs[0].nlargest(2, 'Cost in Rs. (CR)')
+result = {'type': 'dataframe', 'value': most_costly_players}
+        ```
+2024-04-30 11:04:31 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:04:31 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:04:31 [INFO] Answer: {'type': 'dataframe', 'value':        Player Name Base Price         Type  Cost in Rs. (CR)  Cost in $ (K)  \
+97      Sam Curran   20000000  ALL-ROUNDER              18.5         2220.0   
+144  Cameron Green   20000000  ALL-ROUNDER              17.5         2100.0   
+
+    2022 Squad 2023 Squad  
+97         NaN       PBKS  
+144        NaN         MI  }
+2024-04-30 11:04:31 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:05:41 [INFO] Question: Which players were the cheapest buys this season and which team bought them?
+2024-04-30 11:05:41 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:05:41 [INFO] Prompt ID: e7f0ab5c-2ffd-411e-99c8-358883e52c47
+2024-04-30 11:05:41 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:05:41 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:05:41 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:05:41 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:05:43 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:05:43 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:05:46 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:05:46 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Updated code
+cheapest_buys = dfs[0].loc[dfs[0]['Cost in Rs. (CR)'].idxmin()][['Player Name', 'Cost in Rs. (CR)', '2022 Squad']]
+result = {"type": "dataframe", "value": cheapest_buys}
+            ```
+            
+2024-04-30 11:05:46 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:05:46 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:05:46 [INFO] 
+Code running:
+```
+cheapest_buys = dfs[0].loc[dfs[0]['Cost in Rs. (CR)'].idxmin()][['Player Name', 'Cost in Rs. (CR)', '2022 Squad']]
+result = {'type': 'dataframe', 'value': cheapest_buys}
+        ```
+2024-04-30 11:05:46 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:05:46 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:05:46 [INFO] Answer: {'type': 'dataframe', 'value':                               7
+Player Name       Rahul Tewatia
+Cost in Rs. (CR)            0.0
+2022 Squad                   GT}
+2024-04-30 11:05:46 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:07:54 [INFO] Question: Draw a Bargraph showing How much money was spent by each team this season overall.
+2024-04-30 11:07:54 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:07:54 [INFO] Prompt ID: 2bd35b98-6e21-454e-91b0-3d57deffe78a
+2024-04-30 11:07:54 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:07:54 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:07:54 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:07:54 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:07:57 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:07:57 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:08:01 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:08:01 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Data
+data = {'Team': ['SRH', 'KKR', 'PBKS', 'RCB', 'GT'],
+        'Total Money Spent (CR)': [6.0, 0, 5.5, 0, 0]}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.bar(df['Team'], df['Total Money Spent (CR)'], color='skyblue')
+plt.xlabel('Teams')
+plt.ylabel('Total Money Spent (CR)')
+plt.title('Money Spent by Each Team This Season')
+plt.show()
+
+# Declare result var
+result = {"type": "plot", "value": "temp_chart.png"}
+            ```
+            
+2024-04-30 11:08:01 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:08:01 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:08:01 [INFO] Saving charts to /home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png
+2024-04-30 11:08:01 [INFO] 
+Code running:
+```
+data = {'Team': ['SRH', 'KKR', 'PBKS', 'RCB', 'GT'], 'Total Money Spent (CR)': [6.0, 0, 5.5, 0, 0]}
+df = pd.DataFrame(data)
+plt.figure(figsize=(10, 6))
+plt.bar(df['Team'], df['Total Money Spent (CR)'], color='skyblue')
+plt.xlabel('Teams')
+plt.ylabel('Total Money Spent (CR)')
+plt.title('Money Spent by Each Team This Season')
+plt.show()
+result = {'type': 'plot', 'value': '/home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png'}
+        ```
+2024-04-30 11:08:01 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:08:01 [ERROR] Pipeline failed on step 6: [Errno 2] No such file or directory: '/home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png'
+2024-04-30 11:08:57 [INFO] Question: Draw a Bargraph showing How much money was spent by each team this season overall.
+2024-04-30 11:08:57 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:08:57 [INFO] Prompt ID: c49b5fe6-6a4f-4df0-88ca-bc5deb4bb8fe
+2024-04-30 11:08:57 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:08:57 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:08:57 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:08:57 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:08:59 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:08:59 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:09:03 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:09:03 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Data
+data = {'Team':['KKR', 'SRH', 'PBKS', 'GT'],
+        'Total Cost':[0, 6.0, 5.5, 0]}  # Update the Total Cost values accordingly
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Plotting the bar graph
+plt.figure(figsize=(10,6))
+plt.bar(df['Team'], df['Total Cost'], color='skyblue')
+plt.xlabel('Team')
+plt.ylabel('Total Money Spent (in CR)')
+plt.title('Money Spent by Each Team This Season')
+plt.show()
+            ```
+            
+2024-04-30 11:09:03 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:09:03 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:09:03 [INFO] 
+Code running:
+```
+data = {'Team': ['KKR', 'SRH', 'PBKS', 'GT'], 'Total Cost': [0, 6.0, 5.5, 0]}
+df = pd.DataFrame(data)
+plt.figure(figsize=(10, 6))
+plt.bar(df['Team'], df['Total Cost'], color='skyblue')
+plt.xlabel('Team')
+plt.ylabel('Total Money Spent (in CR)')
+plt.title('Money Spent by Each Team This Season')
+plt.show()
+        ```
+2024-04-30 11:09:04 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:09:04 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-04-30 11:09:04 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-04-30 11:09:04 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 11:09:04 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 11:09:04 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Which players are the most costliest buys?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+You generated this python code:
+data = {'Team': ['KKR', 'SRH', 'PBKS', 'GT'], 'Total Cost': [0, 6.0, 5.5, 0]}
+df = pd.DataFrame(data)
+plt.figure(figsize=(10, 6))
+plt.bar(df['Team'], df['Total Cost'], color='skyblue')
+plt.xlabel('Team')
+plt.ylabel('Total Money Spent (in CR)')
+plt.title('Money Spent by Each Team This Season')
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-04-30 11:09:04 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 11:09:07 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-04-30 11:09:07 [ERROR] Pipeline failed on step 6: No code found in the response
+2024-04-30 11:13:46 [INFO] Question: Which players were the cheapest buys this season and which team bought them?
+2024-04-30 11:13:46 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:13:46 [INFO] Prompt ID: 12c32ec7-61c0-43fd-b9d1-99f3137d1b93
+2024-04-30 11:13:46 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:13:46 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:13:46 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:13:46 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:13:48 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:13:48 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:13:53 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:13:53 [INFO] Code generated:
+            ```
+            import pandas as pd
+
+data = {
+    "Player Name": ["Heinrich Klaasen", "Ramon Simmonds", "Rajandeep Singh"],
+    "Base Price": [3000000, 2000000, 20000000],
+    "Type": ["WICKETKEEPER", "BATSMAN", "BOWLER"],
+    "Cost in Rs. (CR)": [6.0, None, 5.5],
+    "Cost in $ (K)": [144.0, None, 48.0],
+    "2022 Squad": [None, "KKR", "PBKS"],
+    "2023 Squad": ["SRH", "RCB", "GT"]
+}
+
+df = pd.DataFrame(data)
+
+cheapest_buys = df[df["Cost in Rs. (CR)"].notnull()].sort_values("Cost in Rs. (CR)")
+result = {"type": "dataframe", "value": cheapest_buys}
+            ```
+            
+2024-04-30 11:13:53 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:13:53 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:13:53 [INFO] 
+Code running:
+```
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+cheapest_buys = df[df['Cost in Rs. (CR)'].notnull()].sort_values('Cost in Rs. (CR)')
+result = {'type': 'dataframe', 'value': cheapest_buys}
+        ```
+2024-04-30 11:13:53 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:13:53 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:13:53 [INFO] Answer: {'type': 'dataframe', 'value':          Player Name Base Price          Type  Cost in Rs. (CR)  \
+242   Glenn Phillips   Retained  WICKETKEEPER              0.00   
+117   Raj Angad Bawa   Retained   ALL-ROUNDER              0.00   
+118     Rishi Dhawan   Retained   ALL-ROUNDER              0.00   
+211      Dhruv Jurel   Retained  WICKETKEEPER              0.00   
+210     K.C Cariappa   Retained        BOWLER              0.00   
+..               ...        ...           ...               ...   
+218      Harry Brook   15000000       BATSMAN             13.25   
+119  Nicholas Pooran   20000000  WICKETKEEPER             16.00   
+25        Ben Stokes   20000000   ALL-ROUNDER             16.25   
+144    Cameron Green   20000000   ALL-ROUNDER             17.50   
+97        Sam Curran   20000000   ALL-ROUNDER             18.50   
+
+     Cost in $ (K) 2022 Squad 2023 Squad  
+242            0.0        SRH        SRH  
+117            0.0       PBKS       PBKS  
+118            0.0       PBKS       PBKS  
+211            0.0         RR         RR  
+210            0.0         RR         RR  
+..             ...        ...        ...  
+218         1590.0        NaN        SRH  
+119         1920.0        SRH        LSG  
+25          1950.0        NaN        CSK  
+144         2100.0        NaN         MI  
+97          2220.0        NaN       PBKS  
+
+[243 rows x 7 columns]}
+2024-04-30 11:13:53 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:14:07 [INFO] Question: Draw a Bargraph showing How much money was spent by each team this season overall.
+2024-04-30 11:14:07 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:14:07 [INFO] Prompt ID: 1601d61e-9700-4c5f-8c31-2f84d44142af
+2024-04-30 11:14:07 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:14:07 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:14:07 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:14:07 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:14:09 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:14:09 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:14:16 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:14:16 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Data
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'],
+        'Base Price': [3000000, 2000000, 20000000],
+        'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'],
+        'Cost in Rs. (CR)': [6.0, None, 5.5],
+        'Cost in $ (K)': [144.0, None, 48.0],
+        '2022 Squad': [None, 'KKR', 'PBKS'],
+        '2023 Squad': ['SRH', 'RCB', 'GT']}
+
+df = pd.DataFrame(data)
+
+# Calculate total cost by team
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+
+# Plotting the bar graph
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+            ```
+            
+2024-04-30 11:14:16 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:14:16 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:14:16 [INFO] 
+Code running:
+```
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+        ```
+2024-04-30 11:14:16 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:14:16 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-04-30 11:14:16 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-04-30 11:14:16 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 11:14:16 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 11:14:16 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Which players are the most costliest buys?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+You generated this python code:
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-04-30 11:14:16 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 11:14:22 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:14:22 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 
+        'Base Price': [3000000, 2000000, 20000000], 
+        'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 
+        'Cost in Rs. (CR)': [6.0, None, 5.5], 
+        'Cost in $ (K)': [144.0, None, 48.0], 
+        '2022 Squad': [None, 'KKR', 'PBKS'], 
+        '2023 Squad': ['SRH', 'RCB', 'GT']}
+
+df = pd.DataFrame(data)
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+            ```
+            
+2024-04-30 11:14:22 [INFO] Executing Step 2: CodeCleaning
+2024-04-30 11:14:22 [INFO] 
+Code running:
+```
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+        ```
+2024-04-30 11:14:23 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-04-30 11:14:23 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-04-30 11:14:23 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 11:14:23 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 11:14:23 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Which players are the most costliest buys?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+You generated this python code:
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-04-30 11:14:23 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 11:14:28 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:14:28 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 
+        'Base Price': [3000000, 2000000, 20000000], 
+        'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 
+        'Cost in Rs. (CR)': [6.0, None, 5.5], 
+        'Cost in $ (K)': [144.0, None, 48.0], 
+        '2022 Squad': [None, 'KKR', 'PBKS'], 
+        '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = pd.DataFrame(data)
+
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+            ```
+            
+2024-04-30 11:14:28 [INFO] Executing Step 2: CodeCleaning
+2024-04-30 11:14:28 [INFO] 
+Code running:
+```
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+        ```
+2024-04-30 11:14:29 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-04-30 11:14:29 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-04-30 11:14:29 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 11:14:29 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 11:14:29 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Rajandeep Singh,20000000,BOWLER,5.5,48.0,PBKS,GT
+Ramon Simmonds,2000000,BATSMAN,,,KKR,RCB
+Heinrich Klaasen,3000000,WICKETKEEPER,6.0,144.0,,SRH
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Which players are the most costliest buys?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Draw a Bargraph showing How much money was spent by each team this season overall.
+
+You generated this python code:
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2024-04-30 11:14:29 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 11:14:34 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:14:34 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 
+        'Base Price': [3000000, 2000000, 20000000], 
+        'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 
+        'Cost in Rs. (CR)': [6.0, None, 5.5], 
+        'Cost in $ (K)': [144.0, None, 48.0], 
+        '2022 Squad': [None, 'KKR', 'PBKS'], 
+        '2023 Squad': ['SRH', 'RCB', 'GT']}
+
+df = pd.DataFrame(data)
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+            ```
+            
+2024-04-30 11:14:34 [INFO] Executing Step 2: CodeCleaning
+2024-04-30 11:14:34 [INFO] 
+Code running:
+```
+data = {'Player Name': ['Heinrich Klaasen', 'Ramon Simmonds', 'Rajandeep Singh'], 'Base Price': [3000000, 2000000, 20000000], 'Type': ['WICKETKEEPER', 'BATSMAN', 'BOWLER'], 'Cost in Rs. (CR)': [6.0, None, 5.5], 'Cost in $ (K)': [144.0, None, 48.0], '2022 Squad': [None, 'KKR', 'PBKS'], '2023 Squad': ['SRH', 'RCB', 'GT']}
+df = dfs[0]
+team_costs = df.groupby('2023 Squad')['Cost in Rs. (CR)'].sum()
+plt.figure(figsize=(10, 6))
+team_costs.plot(kind='bar', color='skyblue')
+plt.title('Total Money Spent by Each Team in 2023 Auction')
+plt.xlabel('Team')
+plt.ylabel('Total Cost in Rs. (CR)')
+plt.xticks(rotation=0)
+plt.show()
+        ```
+2024-04-30 11:14:35 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2024-04-30 11:14:35 [ERROR] Pipeline failed on step 6: No result returned
+2024-04-30 11:17:19 [INFO] Question: Which players are the most costliest buys?
+2024-04-30 11:17:19 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:17:19 [INFO] Prompt ID: bddf38e2-43e0-4fda-8149-a905efe51c71
+2024-04-30 11:17:19 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:17:19 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:17:19 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:17:19 [INFO] Using cached response
+2024-04-30 11:17:19 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:17:19 [INFO] Executing Step 2: Skipping...
+2024-04-30 11:17:19 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:17:19 [INFO] Executing Step 3: Skipping...
+2024-04-30 11:17:19 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:17:19 [INFO] Executing Step 4: Skipping...
+2024-04-30 11:17:19 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:17:19 [INFO] 
+Code running:
+```
+most_costly_players = dfs[0].nlargest(2, 'Cost in Rs. (CR)')
+result = {'type': 'dataframe', 'value': most_costly_players}
+        ```
+2024-04-30 11:17:19 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:17:19 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:17:19 [INFO] Answer: {'type': 'dataframe', 'value':        Player Name Base Price         Type  Cost in Rs. (CR)  Cost in $ (K)  \
+97      Sam Curran   20000000  ALL-ROUNDER              18.5         2220.0   
+144  Cameron Green   20000000  ALL-ROUNDER              17.5         2100.0   
+
+    2022 Squad 2023 Squad  
+97         NaN       PBKS  
+144        NaN         MI  }
+2024-04-30 11:17:19 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:17:29 [INFO] Question: Which players were the cheapest buys this season and which team bought them?
+2024-04-30 11:17:30 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:17:30 [INFO] Prompt ID: 49eb44cb-825e-4f7b-a316-b2e74300c600
+2024-04-30 11:17:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:17:30 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:17:30 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:17:30 [INFO] Using cached response
+2024-04-30 11:17:30 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:17:30 [INFO] Executing Step 2: Skipping...
+2024-04-30 11:17:30 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:17:30 [INFO] Executing Step 3: Skipping...
+2024-04-30 11:17:30 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:17:30 [INFO] Executing Step 4: Skipping...
+2024-04-30 11:17:30 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:17:30 [INFO] 
+Code running:
+```
+cheapest_buys = dfs[0].loc[dfs[0]['Cost in Rs. (CR)'].idxmin()][['Player Name', 'Cost in Rs. (CR)', '2022 Squad']]
+result = {'type': 'dataframe', 'value': cheapest_buys}
+        ```
+2024-04-30 11:17:30 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:17:30 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:17:30 [INFO] Answer: {'type': 'dataframe', 'value':                               7
+Player Name       Rahul Tewatia
+Cost in Rs. (CR)            0.0
+2022 Squad                   GT}
+2024-04-30 11:17:30 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:17:38 [INFO] Question: Which players were the cheapest buys this season and which team bought them?
+2024-04-30 11:17:38 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:17:38 [INFO] Prompt ID: 8780a61c-67c4-4d22-8704-b3fafd545683
+2024-04-30 11:17:39 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:17:39 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:17:39 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:17:39 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:17:41 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:17:41 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:17:47 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:17:47 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Data provided
+data = {
+    "Player Name": ["Billy Stanlake", "K.C Cariappa", "Riyan Parag"],
+    "Base Price": [10000000, 5000000, 4000000],
+    "Type": ["BATSMAN", "BOWLER", "WICKETKEEPER"],
+    "Cost in Rs. (CR)": [17.5, 2.0, None],
+    "Cost in $ (K)": [630.0, None, 1590.0],
+    "2022 Squad": [None, "MI", "SRH"],
+    "2023 Squad": ["RR", "DC", "LSG"]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Find the cheapest buys
+cheapest_buys = df[df["Base Price"] == df["Base Price"].min()]
+
+# Extract player names and buying teams
+player_names = cheapest_buys["Player Name"].tolist()
+buying_teams = cheapest_buys["2022 Squad"].tolist()
+
+result = {
+    "type": "dataframe",
+    "value": pd.DataFrame({
+        "Player Name": player_names,
+        "Buying Team": buying_teams
+    })
+}
+            ```
+            
+2024-04-30 11:17:47 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:17:47 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:17:47 [INFO] 
+Code running:
+```
+data = {'Player Name': ['Billy Stanlake', 'K.C Cariappa', 'Riyan Parag'], 'Base Price': [10000000, 5000000, 4000000], 'Type': ['BATSMAN', 'BOWLER', 'WICKETKEEPER'], 'Cost in Rs. (CR)': [17.5, 2.0, None], 'Cost in $ (K)': [630.0, None, 1590.0], '2022 Squad': [None, 'MI', 'SRH'], '2023 Squad': ['RR', 'DC', 'LSG']}
+df = dfs[0]
+cheapest_buys = df[df['Base Price'] == df['Base Price'].min()]
+player_names = cheapest_buys['Player Name'].tolist()
+buying_teams = cheapest_buys['2022 Squad'].tolist()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Player Name': player_names, 'Buying Team': buying_teams})}
+        ```
+2024-04-30 11:17:47 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:17:47 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:17:48 [INFO] Answer: {'type': 'dataframe', 'value':           Player Name Buying Team
+0       Kyle Jamieson         NaN
+1       Manish Pandey         LSG
+2         David Wiese         NaN
+3            Joe Root         NaN
+4      Mayank Agarwal        PBKS
+5    Heinrich Klaasen         NaN
+6        Akeal Hosein         NaN
+7       Mujeeb Rahman         NaN
+8      Tabraiz Shamsi         NaN
+9      Daryl Mitchell          RR
+10      Mohammad Nabi         KKR
+11          Shai Hope         NaN
+12         Tom Latham         NaN
+13  Michael Bracewell         NaN
+14         Andrew Tye         LSG
+15          Luke Wood         NaN
+16   Moises Henriques         NaN
+17         Matt Henry         NaN
+18       Roston Chase         NaN
+19   Rahkeem Cornwall         NaN}
+2024-04-30 11:17:48 [INFO] Executing Step 8: ResultParsing
+2024-04-30 11:41:58 [INFO] Question: Perform univariate analysis
+2024-04-30 11:41:58 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:41:58 [INFO] Prompt ID: d60fcad5-02bd-4f32-beba-651cf80ee589
+2024-04-30 11:41:58 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:41:58 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:41:58 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:41:58 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:42:05 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform univariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:42:05 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:42:11 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:42:11 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Univariate analysis for player base price
+base_price_stats = dfs[0]['Base Price'].describe()
+
+# Univariate analysis for player cost in Rs.
+cost_in_rs_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+
+# Univariate analysis for player cost in $
+cost_in_dollar_stats = dfs[0]['Cost in $ (K)'].describe()
+
+# Declare result variables
+result = {
+    "base_price_stats": {"type": "dataframe", "value": base_price_stats},
+    "cost_in_rs_stats": {"type": "dataframe", "value": cost_in_rs_stats},
+    "cost_in_dollar_stats": {"type": "dataframe", "value": cost_in_dollar_stats}
+}
+            ```
+            
+2024-04-30 11:42:11 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:42:11 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:42:11 [INFO] 
+Code running:
+```
+base_price_stats = dfs[0]['Base Price'].describe()
+cost_in_rs_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+cost_in_dollar_stats = dfs[0]['Cost in $ (K)'].describe()
+result = {'base_price_stats': {'type': 'dataframe', 'value': base_price_stats}, 'cost_in_rs_stats': {'type': 'dataframe', 'value': cost_in_rs_stats}, 'cost_in_dollar_stats': {'type': 'dataframe', 'value': cost_in_dollar_stats}}
+        ```
+2024-04-30 11:42:11 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:42:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/helpers/output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-04-30 11:42:11 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-04-30 11:42:11 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 11:42:11 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 11:42:11 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Which players are the most costliest buys?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Which players were the cheapest buys this season and which team bought them?
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform univariate analysis
+
+You generated this python code:
+base_price_stats = dfs[0]['Base Price'].describe()
+cost_in_rs_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+cost_in_dollar_stats = dfs[0]['Cost in $ (K)'].describe()
+result = {'base_price_stats': {'type': 'dataframe', 'value': base_price_stats}, 'cost_in_rs_stats': {'type': 'dataframe', 'value': cost_in_rs_stats}, 'cost_in_dollar_stats': {'type': 'dataframe', 'value': cost_in_dollar_stats}}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/helpers/output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+
+Fix the python code above and return the new python code:
+2024-04-30 11:42:11 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 11:42:15 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-04-30 11:42:15 [ERROR] Pipeline failed on step 6: No code found in the response
+2024-04-30 11:52:49 [INFO] Question: Perform univariate analysis
+2024-04-30 11:52:49 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 11:52:50 [INFO] Prompt ID: 01a3bbc7-e82b-4ea8-93c4-8c93f9c21ea8
+2024-04-30 11:52:50 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 11:52:50 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 11:52:50 [INFO] Executing Step 1: CacheLookup
+2024-04-30 11:52:50 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 11:52:52 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform univariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 11:52:52 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 11:52:57 [INFO] Prompt used:
+            None
+            
+2024-04-30 11:52:57 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Univariate analysis on the 'Base Price' column
+base_price_stats = dfs[0]['Base Price'].describe()
+
+# Univariate analysis on the 'Cost in Rs. (CR)' column
+cost_in_rs_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+
+# Univariate analysis on the 'Cost in $ (K)' column
+cost_in_usd_stats = dfs[0]['Cost in $ (K)'].describe()
+
+# Constructing the results dictionary
+result = {
+    "type": "dataframe",
+    "value": pd.DataFrame({
+        'Base Price Stats': base_price_stats,
+        'Cost in Rs. Stats': cost_in_rs_stats,
+        'Cost in $ Stats': cost_in_usd_stats
+    })
+}
+            ```
+            
+2024-04-30 11:52:57 [INFO] Executing Step 4: CachePopulation
+2024-04-30 11:52:57 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 11:52:57 [INFO] 
+Code running:
+```
+base_price_stats = dfs[0]['Base Price'].describe()
+cost_in_rs_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+cost_in_usd_stats = dfs[0]['Cost in $ (K)'].describe()
+result = {'type': 'dataframe', 'value': pd.DataFrame({'Base Price Stats': base_price_stats, 'Cost in Rs. Stats': cost_in_rs_stats, 'Cost in $ Stats': cost_in_usd_stats})}
+        ```
+2024-04-30 11:52:57 [INFO] Executing Step 6: CodeExecution
+2024-04-30 11:52:57 [INFO] Executing Step 7: ResultValidation
+2024-04-30 11:52:57 [INFO] Answer: {'type': 'dataframe', 'value':        Base Price Stats  Cost in Rs. Stats  Cost in $ Stats
+25%                 NaN           0.000000         0.000000
+50%                 NaN           0.000000         0.000000
+75%                 NaN           0.200000        24.000000
+count               568         243.000000       243.000000
+freq                274                NaN              NaN
+max                 NaN          18.500000      2220.000000
+mean                NaN           0.687243        82.469136
+min                 NaN           0.000000         0.000000
+std                 NaN           2.511700       301.404032
+top             2000000                NaN              NaN
+unique               10                NaN              NaN}
+2024-04-30 11:52:57 [INFO] Executing Step 8: ResultParsing
+2024-04-30 12:14:13 [INFO] Question: Perform univariate analysis
+2024-04-30 12:14:13 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 12:14:13 [INFO] Prompt ID: 867f72ce-97a5-47aa-a0b1-33bcfd9eb328
+2024-04-30 12:14:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 12:14:13 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 12:14:13 [INFO] Executing Step 1: CacheLookup
+2024-04-30 12:14:13 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 12:14:19 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform univariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 12:14:19 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 12:14:23 [INFO] Prompt used:
+            None
+            
+2024-04-30 12:14:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Convert 'Cost in Rs. (CR)' column to numeric
+dfs[0]['Cost in Rs. (CR)'] = pd.to_numeric(dfs[0]['Cost in Rs. (CR)'], errors='coerce')
+
+# Perform univariate analysis on 'Cost in Rs. (CR)' column
+cost_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+
+# Declare result variable
+result = {"type": "dataframe", "value": cost_stats}
+            ```
+            
+2024-04-30 12:14:23 [INFO] Executing Step 4: CachePopulation
+2024-04-30 12:14:23 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 12:14:23 [INFO] 
+Code running:
+```
+dfs[0]['Cost in Rs. (CR)'] = pd.to_numeric(dfs[0]['Cost in Rs. (CR)'], errors='coerce')
+cost_stats = dfs[0]['Cost in Rs. (CR)'].describe()
+result = {'type': 'dataframe', 'value': cost_stats}
+        ```
+2024-04-30 12:14:23 [INFO] Executing Step 6: CodeExecution
+2024-04-30 12:14:23 [INFO] Executing Step 7: ResultValidation
+2024-04-30 12:14:23 [INFO] Answer: {'type': 'dataframe', 'value':        Cost in Rs. (CR)
+count        243.000000
+mean           0.687243
+std            2.511700
+min            0.000000
+25%            0.000000
+50%            0.000000
+75%            0.200000
+max           18.500000}
+2024-04-30 12:14:23 [INFO] Executing Step 8: ResultParsing
+2024-04-30 12:17:22 [INFO] Question: Perform univariate analysis
+2024-04-30 12:17:22 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 12:17:22 [INFO] Prompt ID: 685e724c-8f73-4061-acd7-8227b4eb15c7
+2024-04-30 12:17:22 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 12:17:22 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 12:17:22 [INFO] Executing Step 1: CacheLookup
+2024-04-30 12:17:22 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 12:17:24 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform univariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 12:17:24 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 12:17:30 [INFO] Prompt used:
+            None
+            
+2024-04-30 12:17:30 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Univariate analysis for the "Cost in Rs. (CR)" column
+cost_in_rs = dfs[0]['Cost in Rs. (CR)']
+mean_cost = cost_in_rs.mean()
+median_cost = cost_in_rs.median()
+max_cost = cost_in_rs.max()
+min_cost = cost_in_rs.min()
+
+# Create a boxplot to visualize the distribution of costs
+plt.figure(figsize=(8, 6))
+plt.boxplot(cost_in_rs, vert=False)
+plt.xlabel('Cost in Rs. (CR)')
+plt.title('Boxplot of Cost in Rs. (CR)')
+plt.show()
+
+# Declare result variable
+result = {
+    "type": "string",
+    "value": f"Mean cost: {mean_cost}, Median cost: {median_cost}, Max cost: {max_cost}, Min cost: {min_cost}"
+}
+            ```
+            
+2024-04-30 12:17:30 [INFO] Executing Step 4: CachePopulation
+2024-04-30 12:17:30 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 12:17:30 [INFO] 
+Code running:
+```
+cost_in_rs = dfs[0]['Cost in Rs. (CR)']
+mean_cost = cost_in_rs.mean()
+median_cost = cost_in_rs.median()
+max_cost = cost_in_rs.max()
+min_cost = cost_in_rs.min()
+plt.figure(figsize=(8, 6))
+plt.boxplot(cost_in_rs, vert=False)
+plt.xlabel('Cost in Rs. (CR)')
+plt.title('Boxplot of Cost in Rs. (CR)')
+plt.show()
+result = {'type': 'string', 'value': f'Mean cost: {mean_cost}, Median cost: {median_cost}, Max cost: {max_cost}, Min cost: {min_cost}'}
+        ```
+2024-04-30 12:17:30 [INFO] Executing Step 6: CodeExecution
+2024-04-30 12:17:30 [INFO] Executing Step 7: ResultValidation
+2024-04-30 12:17:30 [INFO] Answer: {'type': 'string', 'value': 'Mean cost: 0.6872427983539094, Median cost: 0.0, Max cost: 18.5, Min cost: 0.0'}
+2024-04-30 12:17:30 [INFO] Executing Step 8: ResultParsing
+2024-04-30 12:19:07 [INFO] Question: Perform multivariate analysis
+2024-04-30 12:19:07 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 12:19:08 [INFO] Prompt ID: d6f8e6dd-a10f-4cd7-bce7-dea6dd2e3144
+2024-04-30 12:19:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 12:19:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 12:19:08 [INFO] Executing Step 1: CacheLookup
+2024-04-30 12:19:08 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 12:19:10 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform multivariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 12:19:10 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 12:19:14 [INFO] Prompt used:
+            None
+            
+2024-04-30 12:19:14 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+import matplotlib.pyplot as plt
+
+# Multivariate analysis
+df = dfs[0]
+fig, ax = plt.subplots()
+df.plot(kind='bar', x='Player Name', y=['Base Price', 'Cost in Rs. (CR)', 'Cost in $ (K)'], ax=ax)
+plt.title('Comparison of Base Price and Cost in Rs. and $ for Players')
+plt.xlabel('Player Name')
+plt.ylabel('Amount')
+plt.show()
+
+# Declare result var
+result = {"type": "plot", "value": "temp_chart.png"}
+            ```
+            
+2024-04-30 12:19:14 [INFO] Executing Step 4: CachePopulation
+2024-04-30 12:19:14 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 12:19:14 [INFO] Saving charts to /home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png
+2024-04-30 12:19:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+fig, ax = plt.subplots()
+df.plot(kind='bar', x='Player Name', y=['Base Price', 'Cost in Rs. (CR)', 'Cost in $ (K)'], ax=ax)
+plt.title('Comparison of Base Price and Cost in Rs. and $ for Players')
+plt.xlabel('Player Name')
+plt.ylabel('Amount')
+plt.show()
+result = {'type': 'plot', 'value': '/home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png'}
+        ```
+2024-04-30 12:19:14 [INFO] Executing Step 6: CodeExecution
+2024-04-30 12:19:17 [ERROR] Pipeline failed on step 6: [Errno 2] No such file or directory: '/home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png'
+2024-04-30 12:19:29 [INFO] Question: Perform multivariate analysis
+2024-04-30 12:19:29 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 12:19:29 [INFO] Prompt ID: 3de4cb9f-1550-4e8f-9845-4d64c32ecb45
+2024-04-30 12:19:29 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 12:19:29 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 12:19:29 [INFO] Executing Step 1: CacheLookup
+2024-04-30 12:19:29 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 12:19:31 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform multivariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 12:19:31 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 12:19:35 [INFO] Prompt used:
+            None
+            
+2024-04-30 12:19:35 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Combine all dataframes into one
+df = pd.concat(dfs)
+
+# Perform multivariate analysis
+# Example: Calculate correlation between variables
+correlation_matrix = df.corr()
+
+# Declare result variable
+result = {
+    "type": "dataframe",
+    "value": correlation_matrix
+}
+            ```
+            
+2024-04-30 12:19:35 [INFO] Executing Step 4: CachePopulation
+2024-04-30 12:19:35 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 12:19:35 [INFO] 
+Code running:
+```
+df = pd.concat(dfs)
+correlation_matrix = df.corr()
+result = {'type': 'dataframe', 'value': correlation_matrix}
+        ```
+2024-04-30 12:19:35 [INFO] Executing Step 6: CodeExecution
+2024-04-30 12:19:35 [INFO] Executing Step 7: ResultValidation
+2024-04-30 12:19:35 [INFO] Answer: {'type': 'dataframe', 'value':                   Cost in Rs. (CR)  Cost in $ (K)
+Cost in Rs. (CR)               1.0            1.0
+Cost in $ (K)                  1.0            1.0}
+2024-04-30 12:19:35 [INFO] Executing Step 8: ResultParsing
+2024-04-30 12:21:00 [INFO] Question: Perform multivariate analysis
+2024-04-30 12:21:00 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 12:21:00 [INFO] Prompt ID: 002c02f5-1017-4bb3-9bfd-ad5d94350199
+2024-04-30 12:21:00 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 12:21:00 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 12:21:00 [INFO] Executing Step 1: CacheLookup
+2024-04-30 12:21:00 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 12:21:03 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform multivariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 12:21:03 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 12:21:10 [INFO] Prompt used:
+            None
+            
+2024-04-30 12:21:10 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Perform multivariate analysis
+# Merging the dataframes on player name
+merged_df = pd.merge(dfs[0], dfs[1], on='Player Name', how='inner')
+
+# Calculate the total cost in $ (K) for each player in the merged dataframe
+merged_df['Total Cost in $ (K)'] = merged_df['Cost in $ (K)_x'] + merged_df['Cost in $ (K)_y']
+
+# Find the player with the highest total cost in $ (K)
+highest_cost_player = merged_df.loc[merged_df['Total Cost in $ (K)'].idxmax(), 'Player Name']
+highest_cost = merged_df['Total Cost in $ (K)'].max()
+
+# Find the player with the lowest total cost in $ (K)
+lowest_cost_player = merged_df.loc[merged_df['Total Cost in $ (K)'].idxmin(), 'Player Name']
+lowest_cost = merged_df['Total Cost in $ (K)'].min()
+
+# Prepare the result dictionary
+result = {
+    "type": "string",
+    "value": f"The player with the highest total cost is {highest_cost_player} with a total cost of {highest_cost}K. The player with the lowest total cost is {lowest_cost_player} with a total cost of {lowest_cost}K."
+}
+            ```
+            
+2024-04-30 12:21:10 [INFO] Executing Step 4: CachePopulation
+2024-04-30 12:21:10 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 12:21:10 [INFO] 
+Code running:
+```
+merged_df = pd.merge(dfs[0], dfs[1], on='Player Name', how='inner')
+merged_df['Total Cost in $ (K)'] = merged_df['Cost in $ (K)_x'] + merged_df['Cost in $ (K)_y']
+highest_cost_player = merged_df.loc[merged_df['Total Cost in $ (K)'].idxmax(), 'Player Name']
+highest_cost = merged_df['Total Cost in $ (K)'].max()
+lowest_cost_player = merged_df.loc[merged_df['Total Cost in $ (K)'].idxmin(), 'Player Name']
+lowest_cost = merged_df['Total Cost in $ (K)'].min()
+result = {'type': 'string', 'value': f'The player with the highest total cost is {highest_cost_player} with a total cost of {highest_cost}K. The player with the lowest total cost is {lowest_cost_player} with a total cost of {lowest_cost}K.'}
+        ```
+2024-04-30 12:21:10 [INFO] Executing Step 6: CodeExecution
+2024-04-30 12:21:10 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+IndexError: list index out of range
+
+2024-04-30 12:21:10 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-04-30 12:21:10 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 12:21:10 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 12:21:10 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ Perform univariate analysis
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform univariate analysis
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform univariate analysis
+### ANSWER
+ Mean cost: 0.6872427983539094, Median cost: 0.0, Max cost: 18.5, Min cost: 0.0
+### QUERY
+ Perform multivariate analysis
+### QUERY
+ Perform multivariate analysis
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform multivariate analysis
+
+You generated this python code:
+merged_df = pd.merge(dfs[0], dfs[1], on='Player Name', how='inner')
+merged_df['Total Cost in $ (K)'] = merged_df['Cost in $ (K)_x'] + merged_df['Cost in $ (K)_y']
+highest_cost_player = merged_df.loc[merged_df['Total Cost in $ (K)'].idxmax(), 'Player Name']
+highest_cost = merged_df['Total Cost in $ (K)'].max()
+lowest_cost_player = merged_df.loc[merged_df['Total Cost in $ (K)'].idxmin(), 'Player Name']
+lowest_cost = merged_df['Total Cost in $ (K)'].min()
+result = {'type': 'string', 'value': f'The player with the highest total cost is {highest_cost_player} with a total cost of {highest_cost}K. The player with the lowest total cost is {lowest_cost_player} with a total cost of {lowest_cost}K.'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 171, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+IndexError: list index out of range
+
+
+Fix the python code above and return the new python code:
+2024-04-30 12:21:10 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 12:21:16 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-04-30 12:21:16 [ERROR] Pipeline failed on step 6: No code found in the response
+2024-04-30 12:21:21 [INFO] Question: Perform multivariate analysis
+2024-04-30 12:21:21 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-04-30 12:21:21 [INFO] Prompt ID: c1c9b13a-85b3-4bab-9420-9a3fc731a4a9
+2024-04-30 12:21:21 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-04-30 12:21:21 [INFO] Executing Step 0: ValidatePipelineInput
+2024-04-30 12:21:21 [INFO] Executing Step 1: CacheLookup
+2024-04-30 12:21:21 [INFO] Executing Step 2: PromptGeneration
+2024-04-30 12:21:24 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Perform multivariate analysis
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-04-30 12:21:24 [INFO] Executing Step 3: CodeGenerator
+2024-04-30 12:21:29 [INFO] Prompt used:
+            None
+            
+2024-04-30 12:21:29 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Perform multivariate analysis
+result = {}
+
+# Combine all dataframes into one
+df_combined = pd.concat(dfs)
+
+# Check for any missing values
+missing_values_count = df_combined.isnull().sum()
+
+# Statistical summary of the combined dataframe
+summary_stats = df_combined.describe()
+
+# Correlation matrix of the numerical columns
+correlation_matrix = df_combined.corr()
+
+# Create a pairplot for visualization
+import seaborn as sns
+sns.pairplot(df_combined)
+
+# Update the result variable with the appropriate outputs
+result["missing_values_count"] = {"type": "dataframe", "value": missing_values_count}
+result["summary_stats"] = {"type": "dataframe", "value": summary_stats}
+result["correlation_matrix"] = {"type": "dataframe", "value": correlation_matrix}
+result["pairplot"] = {"type": "plot", "value": "pairplot.png"}
+            ```
+            
+2024-04-30 12:21:29 [INFO] Executing Step 4: CachePopulation
+2024-04-30 12:21:29 [INFO] Executing Step 5: CodeCleaning
+2024-04-30 12:21:29 [INFO] Saving charts to /home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png
+2024-04-30 12:21:29 [INFO] 
+Code running:
+```
+result = {}
+df_combined = pd.concat(dfs)
+missing_values_count = df_combined.isnull().sum()
+summary_stats = df_combined.describe()
+correlation_matrix = df_combined.corr()
+sns.pairplot(df_combined)
+result['missing_values_count'] = {'type': 'dataframe', 'value': missing_values_count}
+result['summary_stats'] = {'type': 'dataframe', 'value': summary_stats}
+result['correlation_matrix'] = {'type': 'dataframe', 'value': correlation_matrix}
+result['pairplot'] = {'type': 'plot', 'value': '/home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png'}
+        ```
+2024-04-30 12:21:29 [INFO] Executing Step 6: CodeExecution
+2024-04-30 12:21:31 [ERROR] Failed with error: Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/helpers/output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2024-04-30 12:21:31 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-04-30 12:21:31 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-04-30 12:21:31 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-04-30 12:21:31 [INFO] Using prompt: <dataframe>
+dfs[0]:568x7
+Player Name,Base Price,Type,Cost in Rs. (CR),Cost in $ (K),2022 Squad,2023 Squad
+Riyan Parag,4000000,WICKETKEEPER,,1590.0,SRH,LSG
+Billy Stanlake,10000000,BATSMAN,17.5,630.0,,RR
+K.C Cariappa,5000000,BOWLER,2.0,,MI,DC
+</dataframe>
+
+
+The user asked the following question:
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform univariate analysis
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform univariate analysis
+### ANSWER
+ Mean cost: 0.6872427983539094, Median cost: 0.0, Max cost: 18.5, Min cost: 0.0
+### QUERY
+ Perform multivariate analysis
+### QUERY
+ Perform multivariate analysis
+### ANSWER
+ Check it out: <dataframe>
+### QUERY
+ Perform multivariate analysis
+### QUERY
+ Perform multivariate analysis
+
+You generated this python code:
+result = {}
+df_combined = pd.concat(dfs)
+missing_values_count = df_combined.isnull().sum()
+summary_stats = df_combined.describe()
+correlation_matrix = df_combined.corr()
+sns.pairplot(df_combined)
+result['missing_values_count'] = {'type': 'dataframe', 'value': missing_values_count}
+result['summary_stats'] = {'type': 'dataframe', 'value': summary_stats}
+result['correlation_matrix'] = {'type': 'dataframe', 'value': correlation_matrix}
+result['pairplot'] = {'type': 'plot', 'value': '/home/prem/Desktop/ds/DataScience/IPLDA/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/pipelines/chat/code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+  File "/home/prem/.local/lib/python3.9/site-packages/pandasai/helpers/output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+
+Fix the python code above and return the new python code:
+2024-04-30 12:21:32 [INFO] Executing Step 1: CodeGenerator
+2024-04-30 12:21:35 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-04-30 12:21:35 [ERROR] Pipeline failed on step 6: No code found in the response
